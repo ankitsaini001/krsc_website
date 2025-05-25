@@ -1,0 +1,44 @@
+/* File: src/components/Header.css */
+
+.navbar {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%; /* just below navbar */
+    left: 0;
+    right: 0;
+    width: 100vw; /* Full screen width */
+    background: #ffffff;
+    display: none;
+    flex-direction: row; /* Arrange items horizontally */
+    justify-content: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+  
+  .nav-item:hover .dropdown-menu {
+    display: flex; /* Show on hover */
+  }
+  
+  .dropdown-item {
+    margin: 0 1.5rem;
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+  }
+  
+  .dropdown-item:hover {
+    color: #007bff;
+  }
+  
+  /* Optional: Make it responsive */
+  @media (max-width: 768px) {
+    .dropdown-menu {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
